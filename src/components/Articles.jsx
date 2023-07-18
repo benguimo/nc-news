@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import Article from "./Article";
+import ArticlesGrid from "./ArticlesGrid";
 import goback from "../images/goback.png";
 import { useEffect, useState } from "react";
 import { getArticles } from "../../api";
@@ -12,11 +12,20 @@ function Articles() {
   const [articles, setArticles] = useState([]);
   const [search, setSearch] = useState("");
   const [topics, setTopics] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false)
 
   useEffect(() => {
+    setLoading(true);
+    setError(false);
     getArticles().then((res) => {
       const newList = res.filter((article) => article.title.toLowerCase().includes(search.toLowerCase()));
       setArticles(newList);
+    }).then(() => {
+      setLoading(false);
+    }).catch(() => {
+      setLoading(false);
+      setError(true)
     });
     getTopics().then((res) => {
       setTopics(res);
@@ -49,10 +58,10 @@ function Articles() {
 
 
 
-  return (
+  return error ? ( <h2 className="message"> Something went wrong! :/</h2>) : loading ? (<h2 className="message">Loading...</h2>) : (
     <div className="list-page">
     <aside>
-      <h3>Menu</h3>
+      <h2>Menu</h2>
       <ul className="topics">
         {topics.map((topic) => {
           return (
@@ -77,10 +86,10 @@ function Articles() {
     </aside>
     <main>
     <NavLink to="/"><img className="goback"  src={goback} alt="" /></NavLink>
-      <h3>List of Articles</h3>
+      <h1>List of Articles</h1>
       <ul className="list">
         {articles.map((article) => {
-          return <Article article={article} key={article.article_id} />;
+          return <ArticlesGrid article={article} key={article.article_id} />;
         })}
       </ul>
     </main>

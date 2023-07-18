@@ -1,9 +1,9 @@
 .list-page {
     display: grid;
     grid-template-areas:
-      "side main main main main main main"
-      "side main main main main main main"
-      "side main main main main main main";
+      "side main main main main"
+      "side main main main main"
+      "side main main main main";
     height: 100vh;
   }
   
@@ -11,20 +11,23 @@
     grid-area: side;
     background-color: rgba(81, 1, 185, 0.863);
     text-align: center;
-    padding-top: 50px;
+    padding-top: 60px;
     box-shadow: rgba(0, 0, 0, 0.168) 8px 3px 20px;
   }
   
   .list-page aside div {
     display: flex;
-    flex-direction: column;
-    margin-top: 20px;
+    flex-direction: row;
+    margin-top: 40px;
   }
-  
+  .list-page aside h2 {
+    color: white;
+  }
   .list-page aside input {
     padding: 10px;
-    margin-right: 20px;
-    margin-left: 20px;
+    width: 70%;
+    max-width: 400px;
+    margin-left: 85px;
     border-radius: 10px;
     border: none;
     background-color: rgb(255, 255, 255);
@@ -42,7 +45,9 @@
   
   .list-page main {
     grid-area: main;
-    padding: 40px 20px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
   }
   
 
@@ -50,46 +55,91 @@
     box-shadow: rgba(0, 0, 0, 0.226) 8px 3px 20px;
     border-radius: 30px;
     width: 50px;
-    margin-left: 40px;
+    caret-color: transparent;
+  }
+  .goback:hover {
+    background-color: rgb(216, 165, 250);
+    box-shadow: rgba(0, 0, 0, 0.24) 15px 5px 15px;
   }
   
+  .goback:focus,
+  .goback:focus-visible {
+    outline: 4px auto;
+  }
+  
+.message{
+    margin-top: 160px;
+    padding: 40px 60px;
+    background-color: rgb(47, 47, 47);
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+  box-shadow: rgba(0, 0, 0, 0.651) 4px 6px 15px;
+  text-align: center;
 
-  .list-page main h3 {
+}
+  .list-page main h1 {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 80px;
+    color: white;
+    font-size: 60px;
   }
   
   .list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 140px);
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, 900px);
+    gap: 80px;
+    align-items: center;
+
   }
   
-  .list h4 {
+  .list h3 {
     height: 60px;
     text-align: center;
+    color: white;
+    margin-top: 20px;
+    font-size: 24px;
   }
   
   .list article {
-    padding: 10px 0;
+    padding: 20px 50px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     cursor: pointer;
+    background-color: rgb(47, 47, 47);
+    border-radius: 20px;
+    text-align: center;
   }
   .list article:hover {
-    background-color: rgba(68, 0, 255, 0.483);
+    background-color: rgba(38, 1, 141, 0.26);
+    box-shadow: rgba(0, 0, 0, 0.24) 15px 5px 15px;
   }
+
+
+  .list article:focus,
+  .list article:focus-visible {
+    outline: 4px auto;
+  }
+
+
   .list img {
     width: 100%;
+    margin-top: 15px;
   }
   
   .list p {
     font-size: 16px;
     text-align: center;
     padding: 10px;
-    font-weight: 600;
-    color: rgb(57, 56, 56);
+    color: rgb(228, 228, 228);
   }
   
+  .title{
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 10px 0;
+  }
+
   .topics {
     display: flex;
     flex-wrap: wrap;
@@ -111,6 +161,8 @@
     font-size: 15px;
     transition: border-color 0.25s;
     box-shadow: rgba(0, 0, 0, 0.171) 0px 3px 15px;
+    caret-color: transparent;
+
   
   }
   

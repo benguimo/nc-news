@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import Articles from "./components/Articles";
 import Comments from "./components/Comments";
 import Users from "./components/Users";
+import SingleArticle from "./components/SingleArticle";
 import './App.css'
 
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="/comments" element={<Comments />} />
         <Route path="/articles" element={<Articles />} />
         <Route path="/users" element={<Users />} />
+        <Route path="/articles/:single_article" element={<SingleArticle />} />
       </Routes>
     </Router>
   );

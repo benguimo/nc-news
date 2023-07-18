@@ -10,7 +10,7 @@ return (
     <nav>
             <div className="nav-container">
                 <div>
-                    <img src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/676/8476733676_6cd1cb44-7b8e-452c-81c0-b089cb4000fe.png?cb=1689666441" alt="logo" className="nav-logo" />
+                <NavLink to="/"><img src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/977/8477073977_2a7d4c49-2514-402f-be0a-626124183bd1.png?cb=1689686955" alt="logo" className="nav-logo" /></NavLink> 
                 </div>
                 <ul className="nav-links">
                     <li>

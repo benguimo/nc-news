@@ -1,12 +1,13 @@
 import { NavLink } from "react-router-dom";
 import React from 'react';
 import "./Home.css"
+import user from '../images/user.png';
 
 function Home() {
-
-  return (
-    <nav>
-    <div className="home">
+  return  (
+<main>
+<div className="home">
+        <img src={user} alt="" />
         <p>
             <span>Welcome to NC News!</span> <br /> You're logged in as "Guest"
         </p>
@@ -26,8 +27,10 @@ function Home() {
                 </button>
         </div>
    </div>
-</nav>
-  )
+
+</main>
+
+  ) 
 }
 
 export default Home

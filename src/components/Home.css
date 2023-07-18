@@ -3,13 +3,17 @@
 }
 
 
-.home{
+main{
     display: grid;
     justify-content: center;
     margin-top: 140px;
+}
+
+.home{
+    display: grid;
+    justify-content: center;
+    align-items: center;
     background-color: rgb(34, 34, 34);
-    margin-right: 20em;
-    margin-left: 50em;
     padding-bottom: 3em;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.651) 4px 6px 15px;
@@ -35,7 +39,25 @@
     font-size: 20px;
   }
 
-
+  .home img {
+    width: 15%;
+    margin-top: 25px;
+    padding: 5px;
+    box-shadow: rgba(0, 0, 0, 0.137) 15px 5px 15px;
+    border-radius: 50px;
+    caret-color: transparent;
+  
+  }
+  
+  .home img:hover {
+    background-color: rgb(216, 165, 250);
+    box-shadow: rgba(0, 0, 0, 0.24) 15px 5px 15px;
+  }
+  
+  .home img:focus,
+  .home img:focus-visible {
+    outline: 4px auto;
+  }
   
 .home p {
     margin-top: 160px;

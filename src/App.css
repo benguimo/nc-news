@@ -15,16 +15,19 @@ body{
 .nav-container{
   display: flex;
   justify-content: space-between;
-  padding: 5px 30px;
+  padding: 5px 40px;
   background-color: rgb(44, 44, 44);
   box-shadow: rgba(0, 0, 0, 0.363) 15px 5px 15px;
 
 }
 
 .nav-logo {
-  width: 240px;
-  color: blueviolet;
-  margin-top: 10px;
+  width: 280px;
+  caret-color: transparent;
+  box-shadow: rgba(21, 0, 48, 0.041) 15px 10px 15px;
+  border-radius: 25px;
+  padding: 10px 20px;
+
 }
 
 .nav-links{
@@ -45,6 +48,8 @@ body{
   padding: 5px;
   box-shadow: rgba(0, 0, 0, 0.137) 15px 5px 15px;
   border-radius: 35px;
+  caret-color: transparent;
+
 }
 
 .nav-links img:hover {
@@ -63,4 +68,6 @@ body{
   font-size: 24px;
   color: white;
   font-size: 20px;
+  caret-color: transparent;
+
 }
