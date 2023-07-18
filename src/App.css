@@ -30,26 +30,26 @@ body{
 .nav-links{
   display: flex;
   list-style: none;
-  gap: 20px;
   align-items: center;
 
 }
 
 .nav-links li {
-  background-color: rgba(74, 3, 116, 0.848);
-  box-shadow: rgba(0, 0, 0, 0.082) 15px 5px 15px;
-  color: white;
-  padding: 10px;
-  margin: 8px;
   border-radius: 15px;
   cursor: pointer;
   caret-color: transparent;
 }
 
-.nav-links li:hover {
-  background-color: rgb(89, 18, 136);
+.nav-links img {
+  width: 60%;
+  padding: 5px;
+  box-shadow: rgba(0, 0, 0, 0.137) 15px 5px 15px;
+  border-radius: 35px;
+}
+
+.nav-links img:hover {
+  background-color: rgb(216, 165, 250);
   box-shadow: rgba(0, 0, 0, 0.24) 15px 5px 15px;
-  color: white;
 }
 
 .nav-links li:focus,

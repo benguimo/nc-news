@@ -1,0 +1,120 @@
+.list-page {
+    display: grid;
+    grid-template-areas:
+      "side main main main main main main"
+      "side main main main main main main"
+      "side main main main main main main";
+    height: 100vh;
+  }
+  
+  .list-page aside {
+    grid-area: side;
+    background-color: rgba(81, 1, 185, 0.863);
+    text-align: center;
+    padding-top: 50px;
+    box-shadow: rgba(0, 0, 0, 0.168) 8px 3px 20px;
+  }
+  
+  .list-page aside div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  
+  .list-page aside input {
+    padding: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    margin-top: 10px;
+  }
+  
+  .list-page aside label {
+    padding-left: 26px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+  }
+  
+  .list-page main {
+    grid-area: main;
+    padding: 40px 20px;
+  }
+  
+
+  .goback {
+    box-shadow: rgba(0, 0, 0, 0.226) 8px 3px 20px;
+    border-radius: 30px;
+    width: 50px;
+    margin-left: 40px;
+  }
+  
+
+  .list-page main h3 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 140px);
+    gap: 20px;
+  }
+  
+  .list h4 {
+    height: 60px;
+    text-align: center;
+  }
+  
+  .list article {
+    padding: 10px 0;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+  }
+  .list article:hover {
+    background-color: rgba(68, 0, 255, 0.483);
+  }
+  .list img {
+    width: 100%;
+  }
+  
+  .list p {
+    font-size: 16px;
+    text-align: center;
+    padding: 10px;
+    font-weight: 600;
+    color: rgb(57, 56, 56);
+  }
+  
+  .topics {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+    font-weight: 600;
+  }
+  
+  .topics button {
+    background-color: rgb(47, 47, 47);
+    color: white;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    border: none;
+    font-size: 15px;
+    transition: border-color 0.25s;
+    box-shadow: rgba(0, 0, 0, 0.171) 0px 3px 15px;
+  
+  }
+  
+  .topics button:hover {
+    background-color: rgba(110, 110, 110, 0.863);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }

@@ -1,7 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import '../App.css'
-
+import '../App.css';
+import user from '../images/user.png';
+import home from "../images/home.png";
+import about from "../images/about.png";
 
 const Header = () => {
 return (
@@ -12,10 +14,13 @@ return (
                 </div>
                 <ul className="nav-links">
                     <li>
-                        <NavLink to="/">Home</NavLink>
+                        <NavLink to="/"><img src={home} alt="" /></NavLink>
                     </li>
                     <li>
-                        <NavLink to="/about">About</NavLink>
+                        <NavLink to="/about"><img src={about} alt="" /></NavLink>
+                    </li>
+                    <li>
+                        <img src={user} alt="" />
                     </li>
                 </ul>
            </div>
