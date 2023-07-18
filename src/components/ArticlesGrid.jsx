@@ -1,6 +1,7 @@
 import { getSingleArticle } from "../../api";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import user from '../images/user.png';
 import "./Articles.css";
 
 const ArticlesGrid = ({ article }) => {
@@ -20,7 +21,10 @@ const ArticlesGrid = ({ article }) => {
     <article key={article.article_id} onClick={getArticle}>
       <h2 className="title">{article.title}</h2>
       <img src={article.article_img_url} alt="" />
-      <h3>Author: {article.author}</h3>
+        <div className="userpic">
+            <img src={user} alt="" />
+            <h3>{article.author}</h3>
+        </div>
       <p>Votes: {article.votes}</p>
       <p>Topic: {article.topic}</p>
       <p>Comments: {article.comment_count}</p>

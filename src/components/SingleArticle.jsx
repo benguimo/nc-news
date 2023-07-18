@@ -26,12 +26,12 @@ const singleArticle = () => {
         <article className="single-article"  key={article.article_id}>
         <h2>{article.title}</h2>
       <img src={article.article_img_url} alt="" />
-      <h4>Author:       {article.author}</h4>
-      <p>Votes:      {article.votes}</p>
-      <p>Topic:       {article.topic}</p>
-      <p><br /> {article.body} <br /></p>
-      <p>Comments:      {article.comment_count}</p>
-      <p>Created at:      {article.created_at}</p>
+      <h4><b>Author: </b>      {article.author}</h4>
+      <p><b>Votes:</b>      {article.votes}</p>
+      <p><b>Topic: </b>      {article.topic}</p>
+      <p className="article-body"> {article.body}</p>
+      <p><b>Comments: </b>     {article.comment_count}</p>
+      <p><b>Created at:</b>      {article.created_at}</p>
     </article>    
     </div>
  
