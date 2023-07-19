@@ -25,3 +25,11 @@ export const getSingleArticle = (id) => {
     });
   };
   
+
+
+  export const getCommentsById = (id) => {
+    return usersApi.get(`/articles/${id}/comments`).then(({ data }) => {
+      return data.comments;
+    });
+  };
+  
