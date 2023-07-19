@@ -6,11 +6,12 @@ import user from '../images/user.png';
 import { getSingleArticle } from "../../api";
 import { getCommentsById } from '../../api';
 import './SingleArticle.css'
+import Comments from "./Comments";
 
 const singleArticle = () => {
   const [article, setArticle] = useState({});
   const [loading, setLoading] = useState(true);
-	const [comments, setComments] = useState([]);
+	
 
 
 
@@ -23,10 +24,7 @@ const singleArticle = () => {
         setLoading(false);
     })
 
-    getCommentsById(single_article)
-			.then((res) => {
-				setComments(res);
-			})
+
   }, []);
 
   
@@ -45,28 +43,7 @@ const singleArticle = () => {
       <p><b>Created at:</b>      {article.created_at}</p>
       <p><b>Comments: </b>     {article.comment_count}</p>
 
-      <ul className="comments">
-			{comments.map((comment) => {
-				return (
-					<li className="each-comment" key={comment.comment_id}>
-            <div className="comment-user">
-            <img src={user} alt="" />
-            <p>{comment.author}</p>
-
-            </div>
-				
-            <p className="body"> {comment.body}</p>
-          <div className="comment-votes">
-          <img className="thumbs" src={thumbs} alt="" /> 
-						<p>{comment.votes}</p>
-          </div>
-          
-					
-          </li>
-				);
-			})}
-		</ul>
-
+      <Comments/>
       </article> 
    
     </div>
