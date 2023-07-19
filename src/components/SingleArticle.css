@@ -1,0 +1,40 @@
+.article-page {
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(80, 23, 212, 0.144);
+    
+  }
+
+
+  .goback {
+    box-shadow: rgba(0, 0, 0, 0.226) 8px 3px 20px;
+    border-radius: 30px;
+    width: 50px;
+    margin-right: 40px;
+    caret-color: transparent;
+  }
+  
+
+  .single-article h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+    color: white;
+  }
+  
+  .single-article img {
+      width: 900px;
+    caret-color: transparent;
+
+  }
+  
+  .single-article h4 {
+      font-size: 30px;
+      padding: 10px;
+      color: white;
+  }
+  
+  .single-article p {
+      padding: 10px;
+      color: white;
+  }
