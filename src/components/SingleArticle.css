@@ -1,5 +1,5 @@
 .article-page {
-    padding: 100px;
+    padding: 100px 400px;
     display: flex;
     justify-content: center;
     background-color: rgba(80, 23, 212, 0.144);
@@ -22,8 +22,9 @@
     color: white;
   }
   
-  .single-article img {
-      width: 900px;
+  .single-article .main-img {
+      width: 100%;
+      min-width: 300px;
     caret-color: transparent;
 
   }
@@ -31,10 +32,91 @@
   .single-article h4 {
       font-size: 30px;
       padding: 10px;
+      margin: 25px 0;
       color: white;
   }
   
   .single-article p {
       padding: 10px;
       color: white;
+  }
+  .single-article b {
+    color: rgb(189, 189, 189);
+  }
+  .article-body{
+  width: fit-content;
+  text-align: justify;
+  line-height: 1.2;
+  }
+
+
+.comments{
+  margin-top: 60px;
+  list-style: none;
+}
+
+
+.comments .each-comment{
+  background-color: rgb(47, 47, 47);
+  border-radius: 20px;
+}
+
+.comments .each-comment:hover{
+  background-color: rgb(54, 54, 54);
+}
+
+.comments .comment-user{
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  margin-top: 20px;
+  padding: 3px;
+}
+
+
+
+
+.comments .comment-user img {
+  width: 40px;
+  padding: 5px;
+  margin-left: 5px;
+  margin-top: 5px;
+  box-shadow: rgba(0, 0, 0, 0.034) 15px 5px 15px;
+  border-radius: 50px;
+  caret-color: transparent;
+  cursor: pointer;
+}
+
+.comments .comment-user img:hover {
+  width: 42px;
+  background-color: rgb(216, 165, 250);
+  box-shadow: rgba(0, 0, 0, 0.178) 15px 5px 15px;
+}
+
+.comments .each-comment .body{
+  margin-left: 5px;
+}
+
+
+.article-page .comments .comment-votes{
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+  padding: 10px;
+}
+
+.article-page .thumbs{
+    width: 35px;
+    padding: 5px;
+    box-shadow: rgba(0, 0, 0, 0.014) 15px 5px 15px;
+    border-radius: 50px;
+    caret-color: transparent;
+    cursor: pointer;
+    font-size: 5px;
+  }
+
+  .article-page .thumbs:hover{
+    width: 38px;
+    box-shadow: rgba(0, 0, 0, 0.034) 15px 5px 15px;
+    background-color: rgb(216, 165, 250);
   }

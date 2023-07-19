@@ -1,12 +1,9 @@
-import React from "react";
+import { useState, useEffect } from 'react';
+
+import { useParams } from "react-router-dom";
 
 function Comments() {
 
-  return (
-    <>
-      
-    </>
-  )
 }
 
-export default Comments
+export default Comments;

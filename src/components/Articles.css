@@ -48,6 +48,7 @@
     display: grid;
     justify-content: center;
     align-items: center;
+    margin-bottom: 100px;
   }
   
 
@@ -56,9 +57,11 @@
     border-radius: 30px;
     width: 50px;
     caret-color: transparent;
+    background-color: rgba(187, 187, 187, 0.863);
+    color: white;
   }
   .goback:hover {
-    background-color: rgb(216, 165, 250);
+    background-color: rgb(255, 255, 255);
     box-shadow: rgba(0, 0, 0, 0.24) 15px 5px 15px;
   }
   
@@ -76,6 +79,7 @@
     font-size: 20px;
   box-shadow: rgba(0, 0, 0, 0.651) 4px 6px 15px;
   text-align: center;
+  caret-color: transparent;
 
 }
   .list-page main h1 {
@@ -92,15 +96,46 @@
     align-items: center;
 
   }
+
   
-  .list h3 {
-    height: 60px;
-    text-align: center;
+
+  .list .userpic{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    gap: 20px;
+  }
+
+
+  .list .userpic h3 {
+    align-items: center;
     color: white;
-    margin-top: 20px;
-    font-size: 24px;
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 20px;
   }
   
+
+  .list .userpic img {
+    width: 50px;
+    padding: 5px;
+    box-shadow: rgba(0, 0, 0, 0.137) 15px 5px 15px;
+    border-radius: 50px;
+    caret-color: transparent;
+    cursor: pointer;
+  }
+  
+  .list .userpic img:hover {
+    background-color: rgb(216, 165, 250);
+    box-shadow: rgba(0, 0, 0, 0.24) 15px 5px 15px;
+  }
+  
+  .list .userpic img:focus,
+  .list .userpic img:focus-visible {
+    outline: 4px auto;
+  }
+
+
   .list article {
     padding: 20px 50px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -110,6 +145,7 @@
     text-align: center;
   }
   .list article:hover {
+    padding: 10px 25px;
     background-color: rgba(38, 1, 141, 0.26);
     box-shadow: rgba(0, 0, 0, 0.24) 15px 5px 15px;
   }

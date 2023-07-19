@@ -7,24 +7,23 @@ function Home() {
   return  (
 <main>
 <div className="home">
-        <img src={user} alt="" />
-        <p>
+
+          <div className="user-section">
+            <img src={user} alt="" />
+            <p className="username-text">Guest</p>
+             </div>
+        
+        <p className="welcome">
             <span>Welcome to NC News!</span> <br /> You're logged in as "Guest"
         </p>
         <div className="home-links">
-
-                <button>
-                    <NavLink to="/comments">Comments</NavLink>
-                </button>
-
-
-                <button>
-                    <NavLink to="/articles">Articles</NavLink>
-                    </button>
-
-                <button>
-                    <NavLink to="/users">Users</NavLink>
-                </button>
+                
+                    <NavLink to="/comments"><button>Comments</button></NavLink>
+                
+                    <NavLink to="/articles"><button>Articles</button></NavLink>
+                   
+                    <NavLink to="/users"><button>Users</button></NavLink>
+                
         </div>
    </div>
 
