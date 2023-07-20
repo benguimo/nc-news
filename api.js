@@ -33,3 +33,22 @@ export const getSingleArticle = (id) => {
     });
   };
   
+
+
+  export const patchArticleVotes = (id) => {
+    const patchBody = {
+      "inc_votes" : 1
+    };
+    return usersApi.patch(`/articles/${id}`, patchBody)
+                   .then(({ data }) => {
+                    return data.article;
+                   })
+  }
+
+
+  export const postComment = (newComment) => {
+    return usersApi.post("/comments", newComment).then(({ data }) => {
+      return data.comments;
+    });
+  };
+  
