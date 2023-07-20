@@ -11,7 +11,6 @@ function Comments() {
 
 
 const { single_article } = useParams();
-console.log(single_article, "single_article")
 
 useEffect(() => {
 getCommentsById(single_article).then((res) => {
@@ -29,16 +28,16 @@ return (
     {comments.map((comment) => {
         return (
             <li className="each-comment" key={comment.comment_id}>
-    <div className="comment-user">
-    <p>{comment.author}</p>
-
-    </div>
+            <div className="comment-user">
+            <p>{comment.author}</p>
         
-    <p className="body"> {comment.body}</p>
-  <div className="comment-votes">
-                <p>{comment.votes}</p>
-  </div>      
-  </li>
+            </div>
+                
+            <p className="body"> {comment.body}</p>
+          <div className="comment-votes">
+                        <p>Votes: {comment.votes}</p>
+          </div>      
+          </li> 
         );
     })}
 </ul>
