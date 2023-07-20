@@ -44,3 +44,11 @@ export const getSingleArticle = (id) => {
                     return data.article;
                    })
   }
+
+
+  export const postComment = (newComment) => {
+    return usersApi.post("/comments", newComment).then(({ data }) => {
+      return data.comments;
+    });
+  };
+  

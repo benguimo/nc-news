@@ -9,7 +9,7 @@ const singleArticle = () => {
   const [article, setArticle] = useState({});
   const [loading, setLoading] = useState(true);
   const [userVotes, setUserVotes] = useState(0);
-	
+	const [error, setError] = useState(false);
 
 
 
@@ -31,9 +31,11 @@ const singleArticle = () => {
 	const handleClick = () => {
 		setUserVotes(userVotes + 1)
 
-		patchArticleVotes(single_article).then(() => {
-      alert("We've added your vote!, please refresh.")
+		patchArticleVotes(single_article).catch((err) => {
+      setUserVotes(userVotes - 1)
+      setError(true)
     })
+    setError(false)
 	}
 
   
@@ -51,11 +53,14 @@ const singleArticle = () => {
 
           
           <div className="votes">
-                <p>{article.votes}</p>  
+                <p>{article.votes + userVotes}</p>  
                 <button className="thumbs-button" onClick={handleClick} disabled={userVotes > 0}>
-                      <img src={thumbs} className="thumbs-article"/>
-                </button>  
+                      <img src={thumbs} className="thumbs-article"/>   
+                </button>
+          {error ? (<p>Oops... Something went wrong!</p>) : null}     
           </div>
+
+
           <p><b>Topic: </b>      {article.topic}</p>
           <p className="article-body"> {article.body}</p>
           <p><b>Created at:</b>      {article.created_at}</p>
