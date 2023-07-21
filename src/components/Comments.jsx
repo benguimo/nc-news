@@ -50,6 +50,7 @@ function handleSubmit(e) {
              setSubmit(true)
     }).catch((err) => {
         setError(error)
+        alert("Your comment couldn't be posted, please try again or contact us.")
     })
   }
 
@@ -64,15 +65,15 @@ function handleSubmit(e) {
             <textarea placeholder="                                            Add a comment..."
                     className='new-comment'
                     type="text"
-                    value={newComment.body}
+                    value={submit ? "                                               posted" : newComment.body}
                     onChange={(e) => {
                         setNewComment((currentBody) => { 
                             return { ...currentBody, body: e.target.value }})
                         }} required />
 
-            <button className='post-button' disabled={submit === true || newComment.body.length > 210} type='submit'>Post</button>
+            <button className='post-button' disabled={submit || newComment.body.length > 210} type='submit'>Post</button>
             {submit ? <h5 className='posted-msg'>Posted!</h5> : null}
-            {error ? (<p className='long-msg'>Well... That's a quite long message for us :/</p>) : (<p className='characters'>{210 - newComment.body.length} characters left</p>)}
+            {error ? (<p className='message'>Something went wrong :/</p>) : (<p className='characters'>{210 - newComment.body.length} characters left</p>)}
         </form>
 
     {comments.map((comment) => {
