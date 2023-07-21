@@ -44,3 +44,18 @@ export const getSingleArticle = (id) => {
                     return data.article;
                    })
   }
+
+
+
+
+  export const postComment = (id, newComment) => {
+    const postBody = {
+      username: "cooljmessy",
+      body: newComment.body
+    }
+    
+    return usersApi.post(`/articles/${id}/comments`, postBody).then(({ data }) => {
+      return data[0];
+    });
+  };
+  
